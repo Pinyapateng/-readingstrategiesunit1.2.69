@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายวิชาการอ่านภาษาอังกฤษเชิงวิจารณ์ (อ30222) - ม.4</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Sarabun & Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelPink: {
+                            50: '#fff5f7',
+                            100: '#ffe3ec',
+                            200: '#ffcce0',
+                            300: '#ffa8cb',
+                            400: '#ff75ab',
+                            500: '#fc4b93',
+                        },
+                        pastelBlue: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0284c7',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Sarabun', 'sans-serif'],
+                        heading: ['Kanit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background: linear-gradient(135deg, #fff5f7 0%, #f0f9ff 100%);
+            min-height: 100vh;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Kanit', sans-serif;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-700 pb-12">
+
+    <!-- Top Navigation Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-pink-100 shadow-sm no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-400 to-sky-400 flex items-center justify-center text-white text-xl font-bold shadow-md">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-slate-800 leading-tight">การอ่านภาษาอังกฤษเชิงวิจารณ์ (อ30222)</h1>
+                    <p class="text-xs text-pink-500 font-medium">โรงเรียนเตรียมอุดมศึกษาน้อมเกล้านครราชสีมา</p>
+                </div>
+            </div>
+
+            <!-- Student Profile Badge / Nav controls -->
+            <div class="flex items-center space-x-3">
+                <button onclick="printLesson()" class="px-3 py-1.5 text-xs sm:text-sm font-medium bg-sky-50 text-sky-600 hover:bg-sky-100 rounded-xl transition flex items-center gap-1.5 border border-sky-200">
+                    <i class="fa-solid fa-print"></i> พิมพ์เนื้อหาบทเรียน
+                </button>
+                <button onclick="openTeacherModal()" class="px-3 py-1.5 text-xs sm:text-sm font-medium bg-pink-50 text-pink-600 hover:bg-pink-100 rounded-xl transition flex items-center gap-1.5 border border-pink-200">
+                    <i class="fa-solid fa-user-shield"></i> สำหรับผู้สอน
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+
+        <!-- Banner & Teacher Info Card -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-pink-100 mb-8 relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-gradient-to-br from-pink-200/40 to-sky-200/40 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center relative z-10">
+                <div class="md:col-span-2 space-y-3">
+                    <span class="inline-block px-3 py-1 bg-pink-100 text-pink-700 text-xs font-semibold rounded-full">
+                        หน่วยการเรียนรู้ที่ 1: Reading Foundations & Strategies (15 คะแนน)
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">
+                        สื่อการเรียนรู้รายชั่วโมง วิชาอ่านภาษาอังกฤษเชิงวิจารณ์
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        บทเรียนออนไลน์แบบโต้ตอบ มีเกมก่อนเรียน ใบความรู้ บทอ่านสั้น ตัวอย่างการวิเคราะห์ คำศัพท์พร้อมเสียงอ่านภาษาอังกฤษ และแบบฝึกหัดประเมินผลสำหรับนักเรียนชั้นมัธยมศึกษาปีที่ 4/1 - 4/5
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-xs text-slate-500 pt-2">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock text-pink-400"></i> รวม 7 ชั่วโมง</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-graduation-cap text-sky-400"></i> มัธยมศึกษาปีที่ 4/1-4/5</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-award text-amber-400"></i> คะแนนเต็ม 15 คะแนน</span>
+                    </div>
+                </div>
+
+                <!-- Teacher Profile Card -->
+                <div class="bg-gradient-to-br from-pink-50 to-sky-50 p-4 sm:p-5 rounded-2xl border border-white/80 shadow-inner flex items-center space-x-4">
+                    <div class="relative">
+                        <img src="https://placehold.co/100x100/ffcce0/475569?text=Teacher" alt="ครูผู้สอน" class="w-16 h-16 rounded-full object-cover ring-4 ring-white shadow">
+                        <span class="absolute bottom-0 right-0 w-4 h-4 bg-emerald-400 border-2 border-white rounded-full"></span>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 font-medium">ครูผู้สอน</div>
+                        <div class="font-bold text-slate-800 text-sm">นางสาวภิญญาพัชญ์ คบด่านกลาง</div>
+                        <div class="text-xs text-pink-600 font-medium">ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ</div>
+                        <div class="text-[11px] text-slate-500 mt-0.5">รร.เตรียมอุดมศึกษาน้อมเกล้านครราชสีมา</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Info Entry Bar -->
+        <div id="student-bar" class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-100 mb-8 no-print">
+            <h3 class="text-sm font-bold text-slate-700 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-id-card text-sky-400"></i> ข้อมูลผู้เรียน (กรอกเพื่อเริ่มทำแบบฝึกหัดและบันทึกคะแนน)
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-xs text-slate-500 mb-1">ชื่อ - สกุล</label>
+                    <input type="text" id="student-name" placeholder="เช่น นายสมชาย ใจดี" class="w-full text-sm px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-300 focus:outline-none transition">
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-500 mb-1">ห้องเรียน</label>
+                    <select id="student-class" class="w-full text-sm px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-300 focus:outline-none transition bg-white">
+                        <option value="">-- เลือกห้องเรียน --</option>
+                        <option value="ม.4/1">มัธยมศึกษาปีที่ 4/1</option>
+                        <option value="ม.4/2">มัธยมศึกษาปีที่ 4/2</option>
+                        <option value="ม.4/3">มัธยมศึกษาปีที่ 4/3</option>
+                        <option value="ม.4/4">มัธยมศึกษาปีที่ 4/4</option>
+                        <option value="ม.4/5">มัธยมศึกษาปีที่ 4/5</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-500 mb-1">เลขที่</label>
+                    <input type="number" id="student-no" placeholder="เช่น 15" min="1" max="50" class="w-full text-sm px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-300 focus:outline-none transition">
+                </div>
+            </div>
+        </div>
+
+        <!-- Hourly Lesson Selection Navigation -->
+        <div class="flex overflow-x-auto gap-2 pb-3 mb-6 no-print scrollbar-none">
+            <button onclick="switchHour(1)" id="tab-hour-1" class="hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-gradient-to-r from-pink-400 to-sky-400 text-white shadow-md">
+                ชั่วโมงที่ 1: Intro & Strategies
+            </button>
+            <button onclick="switchHour(2)" id="tab-hour-2" class="hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:bg-pink-50 border border-slate-200">
+                ชั่วโมงที่ 2: Reading Stages
+            </button>
+            <button onclick="switchHour(3)" id="tab-hour-3" class="hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:bg-pink-50 border border-slate-200">
+                ชั่วโมงที่ 3: Skimming & Scanning
+            </button>
+            <button onclick="switchHour(4)" id="tab-hour-4" class="hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:bg-pink-50 border border-slate-200">
+                ชั่วโมงที่ 4: Finding Topic
+            </button>
+            <button onclick="switchHour(5)" id="tab-hour-5" class="hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:bg-pink-50 border border-slate-200">
+                ชั่วโมงที่ 5: Stated Main Idea
+            </button>
+            <button onclick="switchHour(6)" id="tab-hour-6" class="hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:bg-pink-50 border border-slate-200">
+                ชั่วโมงที่ 6: Implied Main Idea
+            </button>
+            <button onclick="switchHour(7)" id="tab-hour-7" class="hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:bg-pink-50 border border-slate-200">
+                ชั่วโมงที่ 7: Review & Unit Test
+            </button>
+        </div>
+
+        <!-- LESSON CONTENT CONTAINER -->
+        <div id="lesson-content-area" class="space-y-8 no-print">
+            <!-- Content dynamically rendered -->
+        </div>
+
+        <!-- PRINT CONTAINER (Visible only during print) -->
+        <div id="print-content-area" class="hidden print-only space-y-8">
+            <!-- Rendered all hours for printing -->
+        </div>
+
+    </main>
+
+    <!-- Teacher Auth Modal -->
+    <div id="teacher-modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-pink-100 transform transition-all">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-lock text-pink-500"></i> เข้าสู่ระบบสำหรับผู้สอน
+                </h3>
+                <button onclick="closeTeacherModal()" class="text-slate-400 hover:text-slate-600 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <p class="text-xs text-slate-500 mb-4">
+                กรุณากรอกรหัสผ่านเพื่อเข้าสู่โหมดตรวจเฉลยละเอียด และตรวจสอบสรุปผลคะแนนของนักเรียน
+            </p>
+            <form onsubmit="verifyTeacherPass(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">รหัสผ่านผู้สอน (Password)</label>
+                    <input type="password" id="teacher-pass" placeholder="••••••••" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-300 focus:outline-none text-sm">
+                    <p id="pass-error" class="text-xs text-red-500 mt-1 hidden">รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง</p>
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-gradient-to-r from-pink-400 to-sky-400 text-white rounded-xl text-sm font-semibold hover:opacity-95 transition shadow-md">
+                    เข้าสู่ระบบ
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Teacher Panel Drawer -->
+    <div id="teacher-dashboard" class="fixed inset-y-0 right-0 w-full sm:w-96 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 overflow-y-auto no-print">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-6 border-b pb-4">
+                <div>
+                    <h3 class="font-bold text-slate-800 text-base">Teacher Dashboard</h3>
+                    <p class="text-xs text-pink-500 font-medium">ครูภิญญาพัชญ์ คบด่านกลาง</p>
+                </div>
+                <button onclick="closeTeacherDashboard()" class="text-slate-400 hover:text-slate-600 text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Dashboard Options -->
+            <div class="space-y-6">
+                <div class="bg-pink-50 p-4 rounded-2xl border border-pink-100">
+                    <h4 class="text-xs font-bold text-pink-700 uppercase tracking-wider mb-2">สถานะสิทธิ์ครูผู้สอน</h4>
+                    <p class="text-xs text-slate-600"><i class="fa-solid fa-circle-check text-emerald-500"></i> ยืนยันตัวตนสำเร็จ (โหมดดูเฉลย)</p>
+                    <button onclick="toggleAnswerKeys()" id="toggle-answers-btn" class="mt-3 w-full py-2 text-xs font-semibold bg-pink-500 text-white rounded-xl hover:bg-pink-600 transition">
+                        แสดงเฉลยในหน้าบทเรียน
+                    </button>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">สรุปผลคะแนนที่ส่งแล้ว</h4>
+                    <div id="student-scores-list" class="space-y-2 text-xs text-slate-600">
+                        <p class="text-slate-400 italic">ยังไม่มีข้อมูลการส่งแบบฝึกหัดในเซสชันนี้</p>
+                    </div>
+                </div>
+
+                <div class="border-t pt-4">
+                    <button onclick="logoutTeacher()" class="w-full py-2 border border-red-200 text-red-500 rounded-xl text-xs font-semibold hover:bg-red-50 transition">
+                        ออกจากระบบครูผู้สอน
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Speech Audio Floating Controller Indicator -->
+    <div id="tts-toast" class="fixed bottom-4 right-4 bg-slate-900 text-white px-4 py-2.5 rounded-2xl shadow-xl flex items-center space-x-3 text-xs opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+        <i class="fa-solid fa-volume-high text-sky-400 animate-pulse"></i>
+        <span id="tts-text">กำลังเล่นเสียงอ่าน...</span>
+    </div>
+
+    <!-- JavaScript Core Logic -->
+    <script>
+        let currentHour = 1;
+        let isTeacherMode = false;
+        let showAnswers = false;
+        let studentScores = {};
+
+        // Printable document renderer
+        function printLesson() {
+            const printArea = document.getElementById('print-content-area');
+            const studentName = document.getElementById('student-name').value.trim() || '..........................................................';
+            const studentClass = document.getElementById('student-class').value || 'ม.4/......';
+            const studentNo = document.getElementById('student-no').value || '......';
+
+            let printHTML = `
+                <div class="border-b-2 border-slate-800 pb-4 mb-6">
+                    <div class="text-center font-bold space-y-1">
+                        <h1 class="text-xl">โรงเรียนเตรียมอุดมศึกษาน้อมเกล้านครราชสีมา</h1>
+                        <h2 class="text-lg">เอกสารประกอบการเรียน รายวิชาการอ่านภาษาอังกฤษเชิงวิจารณ์ (อ30222)</h2>
+                        <h3 class="text-md font-medium text-slate-700">หน่วยการเรียนรู้ที่ 1: Reading Foundations & Strategies (ชั่วโมงที่ 1–7)</h3>
+                        <p class="text-xs text-slate-500 font-normal">ครูผู้สอน: นางสาวภิญญาพัชญ์ คบด่านกลาง (ตำแหน่ง ครู วิทยฐานะ ครูชำนาญการพิเศษ)</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-dashed border-slate-400 flex justify-between text-xs font-semibold">
+                        <span>ชื่อ-นามสกุล ผู้เรียน: ${studentName}</span>
+                        <span>ชั้น: ${studentClass}</span>
+                        <span>เลขที่: ${studentNo}</span>
+                    </div>
+                </div>
+            `;
+
+            for (let h = 1; h <= 7; h++) {
+                const data = lessons[h];
+                printHTML += `
+                    <div class="page-break space-y-4 mb-8">
+                        <div class="border-b pb-2">
+                            <h2 class="text-lg font-bold text-slate-900">${data.title}</h2>
+                            <p class="text-xs italic text-slate-600">วัตถุประสงค์: ${data.objective}</p>
+                        </div>
+                        <div class="print-content space-y-4 text-xs">
+                            ${data.contentHTML}
+                            <div class="pt-2">
+                                ${data.exerciseHTML}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            printArea.innerHTML = printHTML;
+
+            // Trigger window print safely
+            setTimeout(() => {
+                window.print();
+            }, 200);
+        }
+
+        // Helper Function for Audio Card
+        function renderVocabCard(word, pos, meaning, def, ex) {
+            return `
+                <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:border-pink-200 transition space-y-2">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="font-bold text-slate-800 text-sm">${word}</span>
+                            <span class="text-xs text-slate-400 font-mono">(${pos})</span>
+                            <span class="text-xs text-pink-500 font-medium ml-2">Meaning: ${meaning}</span>
+                        </div>
+                        <button onclick="speakText('${word}')" class="w-8 h-8 rounded-full bg-pink-50 text-pink-600 hover:bg-pink-100 flex items-center justify-center transition text-xs shadow-sm" title="ฟังเสียงคำศัพท์">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">${def}</p>
+                    <div class="text-[11px] text-slate-600 bg-slate-50 p-2.5 rounded-xl italic border border-slate-100 flex items-center justify-between">
+                        <span>Ex: "${ex}"</span>
+                        <button onclick="speakText('${ex.replace(/'/g, "\\'")}')" class="text-sky-500 hover:text-sky-700 ml-2">
+                            <i class="fa-regular fa-circle-play text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Lesson Data Structure with Games, Handouts, Short Passages, & Vocab
+        const lessons = {
+            1: {
+                title: "ชั่วโมงที่ 1: ปฐมนิเทศรายวิชา & Reading Strategies",
+                objective: "เข้าใจโครงสร้างรายวิชา เกณฑ์วัดผล และความสำคัญของ Reading Strategies",
+                
+                // Warm-up Mini Game
+                gameHTML: `
+                    <div class="bg-gradient-to-r from-amber-50 to-orange-50 p-5 rounded-3xl border border-amber-200 mb-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-amber-200 text-amber-800 text-xs font-bold rounded-full flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad"></i> Warm-up Game (เกมก่อนเรียน)
+                            </span>
+                            <span class="text-xs text-amber-600">ชั่วโมงที่ 1: Strategy Finder</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-800 mb-2">ทายใจผู้อ่าน: หากคุณเจอบทความยาว 10 หน้า แต่มีเวลาอ่านเพียง 2 นาที คุณควรทำอย่างไร?</h4>
+                        <div id="game-1-options" class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkGameAnswer(1, 'A', false)" class="p-3 text-xs bg-white border border-amber-200 hover:bg-amber-100 rounded-xl text-left transition">A) อ่านทุกคำตั้งแต่วรรคแรกจนถึงจบ</button>
+                            <button onclick="checkGameAnswer(1, 'B', true)" class="p-3 text-xs bg-white border border-amber-200 hover:bg-amber-100 rounded-xl text-left transition font-semibold text-slate-700">B) อ่านกวาดสายตาดูหัวข้อและประโยคสรุป (Skimming)</button>
+                            <button onclick="checkGameAnswer(1, 'C', false)" class="p-3 text-xs bg-white border border-amber-200 hover:bg-amber-100 rounded-xl text-left transition">C) ไม่เปิดอ่านเลยแล้วเดาคำตอบ</button>
+                        </div>
+                        <div id="game-1-feedback" class="mt-3 text-xs font-semibold hidden"></div>
+                    </div>
+                `,
+
+                // Handout Content
+                contentHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                        <!-- ใบความรู้ -->
+                        <div class="border-l-4 border-pink-400 pl-4">
+                            <h3 class="text-lg font-bold text-slate-800">ใบความรู้ที่ 1.1: Introduction to Critical Reading</h3>
+                            <p class="text-sm text-slate-600 mt-1">การอ่านภาษาอังกฤษเชิงวิจารณ์ (Critical Reading) มิใช่เพียงการแปลความหมายของคำศัพท์ แต่เป็นการวิเคราะห์ (Analyze) ตีความ (Interpret) และประเมินค่า (Evaluate) สิ่งที่ผู้เขียนต้องการสื่อสารอย่างมีเหตุผล</p>
+                        </div>
+
+                        <!-- Grid Info -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-pink-50/60 p-4 rounded-2xl border border-pink-100">
+                                <h4 class="font-bold text-pink-700 text-sm mb-2"><i class="fa-solid fa-list-check"></i> เกณฑ์การให้คะแนนหน่วยที่ 1 (15 คะแนน)</h4>
+                                <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>แบบฝึกหัดท้ายชั่วโมง (5 คะแนน)</li>
+                                    <li>การมีส่วนร่วมในชั้นเรียน & คำศัพท์ (3 คะแนน)</li>
+                                    <li>แบบทดสอบย่อยประจำหน่วย (7 คะแนน)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-sky-50/60 p-4 rounded-2xl border border-sky-100">
+                                <h4 class="font-bold text-sky-700 text-sm mb-2"><i class="fa-solid fa-brain"></i> 4 หัวใจสำคัญของ Reading Strategies</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed">1. Predicting (ทำนายเนื้อหา) | 2. Questioning (ตั้งคำถาม) | 3. Clarifying (ทำความเข้าใจจุดสับสน) | 4. Summarizing (สรุปความ)</p>
+                            </div>
+                        </div>
+
+                        <!-- Short Practice Passage -->
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-slate-800"><i class="fa-solid fa-file-lines text-pink-400"></i> ตัวอย่างบทอ่านสั้น (Short Reading Passage)</h4>
+                                <button onclick="speakText('Critical readers do not passively accept everything they read. Instead, they ask questions about the author\'s purpose, background, and logical reasoning.')" class="px-3 py-1 bg-pink-100 text-pink-700 hover:bg-pink-200 rounded-lg text-xs font-medium transition flex items-center gap-1">
+                                    <i class="fa-solid fa-volume-high"></i> ฟังบทอ่าน
+                                </button>
+                            </div>
+                            <p class="text-xs text-slate-600 italic bg-white p-3 rounded-xl border border-slate-100 leading-relaxed">
+                                "Critical readers do not passively accept everything they read. Instead, they ask questions about the author's purpose, background, and logical reasoning. This active engagement allows them to distinguish facts from opinions."
+                            </p>
+                            <div class="text-[11px] text-pink-600 font-medium pt-1">
+                                📌 <strong>คำอธิบายตัวอย่าง:</strong> จากบทอ่านจะเห็นว่า "ผู้อ่านเชิงวิจารณ์จะไม่ยอมรับข้อมูลแบบผ่านๆ แต่จะตั้งคำถามถึงวัตถุประสงค์และแยกข้อเท็จจริงออกจากความคิดเห็น"
+                            </div>
+                        </div>
+
+                        <!-- Vocabulary Section -->
+                        <div class="mt-6">
+                            <h4 class="font-bold text-slate-800 text-base mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-spell-check text-pink-400"></i> คำศัพท์ยากประจำชั่วโมง (Key Vocabulary)
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                ${renderVocabCard("Critical", "adj.", "เชิงวิจารณ์ / พิจารณาอย่างถอดถอน", "Expressing adverse or disapproving comments or analyzing carefully.", "A critical reader always checks facts before believing them.")}
+                                ${renderVocabCard("Strategy", "n.", "กลยุทธ์ / แผนการ", "A plan of action designed to achieve a long-term goal.", "Skimming is an effective reading strategy.")}
+                                ${renderVocabCard("Passively", "adv.", "อย่างตั้งรับ / โดยไม่โต้ตอบ", "Without active response or resistance.", "Do not read passively; stay engaged with the text.")}
+                                ${renderVocabCard("Distinguish", "v.", "จำแนก / แยกแยะ", "Recognize or treat someone or something as different.", "It is crucial to distinguish fact from opinion.")}
+                            </div>
+                        </div>
+                    </div>
+                `,
+
+                // Exercise
+                exerciseHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 mt-6 space-y-6">
+                        <h3 class="text-lg font-bold text-slate-800 border-b pb-3 flex items-center justify-between">
+                            <span><i class="fa-solid fa-pen-to-square text-sky-400"></i> แบบฝึกหัดชั่วโมงที่ 1: Reading Strategies Check</span>
+                            <span class="text-xs font-normal text-slate-400">(5 คะแนน)</span>
+                        </h3>
+
+                        <form id="quiz-form-1" onsubmit="gradeQuiz(event, 1)">
+                            <div class="space-y-4 mb-6">
+                                <div>
+                                    <p class="text-sm font-semibold text-slate-700 mb-2">1. What do critical readers do according to the sample passage?</p>
+                                    <div class="space-y-2 text-sm pl-2">
+                                        <label class="flex items-center gap-2 cursor-pointer hover:text-pink-600"><input type="radio" name="q1" value="A"> A) Accept all facts without questioning.</label>
+                                        <label class="flex items-center gap-2 cursor-pointer hover:text-pink-600"><input type="radio" name="q1" value="B"> B) Ask questions about author purpose and reasoning.</label>
+                                        <label class="flex items-center gap-2 cursor-pointer hover:text-pink-600"><input type="radio" name="q1" value="C"> C) Read as fast as possible without thinking.</label>
+                                    </div>
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: B) Ask questions about author purpose and reasoning.</div>
+                                </div>
+
+                                <div>
+                                    <p class="text-sm font-semibold text-slate-700 mb-2">2. Complete the sentence: Active readers can __________ facts from opinions.</p>
+                                    <input type="text" name="q2" placeholder="พิมพ์คำตอบภาษาอังกฤษ..." class="w-full max-w-xs text-sm px-3 py-2 border border-slate-200 rounded-xl focus:ring-pink-300 focus:outline-none">
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: distinguish</div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="px-6 py-2.5 bg-gradient-to-r from-pink-400 to-sky-400 text-white text-sm font-semibold rounded-xl hover:opacity-95 shadow-md transition">
+                                ส่งคำตอบชั่วโมงที่ 1
+                            </button>
+                        </form>
+                        <div id="result-1" class="mt-4 hidden p-4 rounded-2xl bg-sky-50 border border-sky-200"></div>
+                    </div>
+                `
+            },
+
+            2: {
+                title: "ชั่วโมงที่ 2: ขั้นตอนการอ่าน (Reading Stages)",
+                objective: "จำแนกและปฏิบัติกิจกรรมการอ่านตามขั้นตอน Pre-reading, While-reading และ Post-reading",
+
+                gameHTML: `
+                    <div class="bg-gradient-to-r from-sky-50 to-indigo-50 p-5 rounded-3xl border border-sky-200 mb-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-sky-200 text-sky-800 text-xs font-bold rounded-full flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad"></i> Warm-up Game (เกมก่อนเรียน)
+                            </span>
+                            <span class="text-xs text-sky-600">ชั่วโมงที่ 2: Stage Order Challenge</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-800 mb-2">เรียงลำดับขั้นตอน: กิจกรรม "สรุปย่อบทความ (Summarizing)" ควรทำในขั้นตอนใด?</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkGameAnswer(2, 'A', false)" class="p-3 text-xs bg-white border border-sky-200 hover:bg-sky-100 rounded-xl text-left transition">A) Pre-reading (ก่อนอ่าน)</button>
+                            <button onclick="checkGameAnswer(2, 'B', false)" class="p-3 text-xs bg-white border border-sky-200 hover:bg-sky-100 rounded-xl text-left transition">B) While-reading (ขณะอ่าน)</button>
+                            <button onclick="checkGameAnswer(2, 'C', true)" class="p-3 text-xs bg-white border border-sky-200 hover:bg-sky-100 rounded-xl text-left transition font-semibold text-slate-700">C) Post-reading (หลังอ่าน)</button>
+                        </div>
+                        <div id="game-2-feedback" class="mt-3 text-xs font-semibold hidden"></div>
+                    </div>
+                `,
+
+                contentHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                        <div class="border-l-4 border-sky-400 pl-4">
+                            <h3 class="text-lg font-bold text-slate-800">ใบความรู้ที่ 2.1: The Three Stages of Reading</h3>
+                            <p class="text-sm text-slate-600 mt-1">กระบวนการอ่านอย่างมีประสิทธิภาพแบ่งออกเป็น 3 ระยะหลัก ซึ่งช่วยเพิ่มความแม่นยำในการทำความเข้าใจบทความ</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-pink-50 p-5 rounded-2xl border border-pink-100">
+                                <span class="text-xs font-bold px-2 py-0.5 bg-pink-200 text-pink-700 rounded-full">Stage 1</span>
+                                <h4 class="font-bold text-slate-800 text-sm mt-2">Pre-reading (ก่อนอ่าน)</h4>
+                                <p class="text-xs text-slate-600 mt-1">กวาดสายตาดูหัวข้อ (Title) ภาพประกอบ สแกนคำศัพท์ และตั้งเป้าหมายการอ่านเพื่อกระตุ้นความรู้เดิม</p>
+                            </div>
+                            <div class="bg-purple-50 p-5 rounded-2xl border border-purple-100">
+                                <span class="text-xs font-bold px-2 py-0.5 bg-purple-200 text-purple-700 rounded-full">Stage 2</span>
+                                <h4 class="font-bold text-slate-800 text-sm mt-2">While-reading (ขณะอ่าน)</h4>
+                                <p class="text-xs text-slate-600 mt-1">เน้นการหาใจความสำคัญ (Main idea) เดาความหมายจากบริบท (Context clues) และจดโน้ตย่อ</p>
+                            </div>
+                            <div class="bg-sky-50 p-5 rounded-2xl border border-sky-100">
+                                <span class="text-xs font-bold px-2 py-0.5 bg-sky-200 text-sky-700 rounded-full">Stage 3</span>
+                                <h4 class="font-bold text-slate-800 text-sm mt-2">Post-reading (หลังอ่าน)</h4>
+                                <p class="text-xs text-slate-600 mt-1">สรุปความ เขียนแผนผังความคิด ตอบคำถามเพื่อทบทวน และประเมินคุณค่าของเนื้อหา</p>
+                            </div>
+                        </div>
+
+                        <!-- Sample Short Passage -->
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-slate-800"><i class="fa-solid fa-file-lines text-sky-400"></i> ตัวอย่างบทอ่านสาธิต (Reading Stage Example)</h4>
+                                <button onclick="speakText('Before reading a scientific article about solar energy, look at the diagrams. While reading, highlight technical terms. After reading, write a three-sentence summary.')" class="px-3 py-1 bg-sky-100 text-sky-700 hover:bg-sky-200 rounded-lg text-xs font-medium transition flex items-center gap-1">
+                                    <i class="fa-solid fa-volume-high"></i> ฟังบทอ่าน
+                                </button>
+                            </div>
+                            <p class="text-xs text-slate-600 italic bg-white p-3 rounded-xl border border-slate-100 leading-relaxed">
+                                "Before reading a scientific article about solar energy, look at the diagrams. While reading, highlight technical terms. After reading, write a three-sentence summary."
+                            </p>
+                        </div>
+
+                        <!-- Vocab -->
+                        <div class="mt-6">
+                            <h4 class="font-bold text-slate-800 text-base mb-3"><i class="fa-solid fa-spell-check text-pink-400"></i> คำศัพท์ยากประจำชั่วโมง</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                ${renderVocabCard("Preview", "v.", "สำรวจล่วงหน้า / ดูตัวอย่าง", "To look at or inspect something before.", "Previewing the article structure saves time.")}
+                                ${renderVocabCard("Highlight", "v.", "เน้นย้ำ / ขีดเส้นใต้", "Draw special attention to something.", "Highlight key terms during the while-reading stage.")}
+                                ${renderVocabCard("Diagram", "n.", "แผนภูมิ / แผนภาพ", "A simplified drawing showing structure.", "Look at the diagram before reading the text.")}
+                            </div>
+                        </div>
+                    </div>
+                `,
+
+                exerciseHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 mt-6 space-y-6">
+                        <h3 class="text-lg font-bold text-slate-800 border-b pb-3">แบบฝึกหัดชั่วโมงที่ 2: Categorizing Reading Stages</h3>
+
+                        <form id="quiz-form-2" onsubmit="gradeQuiz(event, 2)">
+                            <div class="space-y-4 text-sm">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-slate-50 p-3 rounded-xl">
+                                    <span>1. Looking at subheadings and bold terms before reading the full text.</span>
+                                    <select name="q1" class="text-xs px-3 py-1.5 border border-slate-200 rounded-lg focus:outline-none">
+                                        <option value="">-- เลือกขั้นตอน --</option>
+                                        <option value="Pre-reading">Pre-reading</option>
+                                        <option value="While-reading">While-reading</option>
+                                        <option value="Post-reading">Post-reading</option>
+                                    </select>
+                                </div>
+                                <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg">เฉลย: Pre-reading</div>
+
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-slate-50 p-3 rounded-xl">
+                                    <span>2. Answering comprehension questions and writing a mind map after reading.</span>
+                                    <select name="q2" class="text-xs px-3 py-1.5 border border-slate-200 rounded-lg focus:outline-none">
+                                        <option value="">-- เลือกขั้นตอน --</option>
+                                        <option value="Pre-reading">Pre-reading</option>
+                                        <option value="While-reading">While-reading</option>
+                                        <option value="Post-reading">Post-reading</option>
+                                    </select>
+                                </div>
+                                <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg">เฉลย: Post-reading</div>
+                            </div>
+
+                            <button type="submit" class="mt-6 px-6 py-2.5 bg-gradient-to-r from-pink-400 to-sky-400 text-white text-sm font-semibold rounded-xl hover:opacity-95 shadow-md transition">
+                                ส่งคำตอบชั่วโมงที่ 2
+                            </button>
+                        </form>
+                        <div id="result-2" class="mt-4 hidden p-4 rounded-2xl bg-sky-50 border border-sky-200"></div>
+                    </div>
+                `
+            },
+
+            3: {
+                title: "ชั่วโมงที่ 3: เทคนิค Skimming และ Scanning",
+                objective: "เปรียบเทียบและประยุกต์ใช้เทคนิค Skimming และ Scanning ในการค้นหาข้อมูลได้อย่างรวดเร็ว",
+
+                gameHTML: `
+                    <div class="bg-gradient-to-r from-pink-50 to-rose-50 p-5 rounded-3xl border border-pink-200 mb-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-pink-200 text-pink-800 text-xs font-bold rounded-full flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad"></i> Warm-up Game (เกมก่อนเรียน)
+                            </span>
+                            <span class="text-xs text-pink-600">ชั่วโมงที่ 3: Speed Match!</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-800 mb-2">สถานการณ์: คุณกำลังหา "เบอร์โทรศัพท์ของสถานีตำรวจ" ในสมุดโทรศัพท์ คุณจะใช้เทคนิคใด?</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <button onclick="checkGameAnswer(3, 'A', false)" class="p-3 text-xs bg-white border border-pink-200 hover:bg-pink-100 rounded-xl text-left transition">A) Skimming (อ่านจับใจความรวม)</button>
+                            <button onclick="checkGameAnswer(3, 'B', true)" class="p-3 text-xs bg-white border border-pink-200 hover:bg-pink-100 rounded-xl text-left transition font-semibold text-slate-700">B) Scanning (อ่านกวาดสายตาหาข้อมูลเฉพาะ)</button>
+                        </div>
+                        <div id="game-3-feedback" class="mt-3 text-xs font-semibold hidden"></div>
+                    </div>
+                `,
+
+                contentHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                        <div class="border-l-4 border-pink-400 pl-4">
+                            <h3 class="text-lg font-bold text-slate-800">ใบความรู้ที่ 3.1: Skimming vs Scanning Techniques</h3>
+                            <p class="text-sm text-slate-600 mt-1">กลยุทธ์การอ่านเร็วที่ช่วยประหยัดเวลาในการค้นหาข้อมูลภาษาอังกฤษ</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-pink-50/70 p-5 rounded-2xl border border-pink-200 space-y-2">
+                                <h4 class="font-bold text-pink-700 text-sm flex items-center gap-2"><i class="fa-solid fa-eye"></i> Skimming (อ่านข้ามเพื่อภาพรวม)</h4>
+                                <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                                    <li>เป้าหมาย: หา Main Idea หรือภาพรวมของเรื่อง</li>
+                                    <li>เทคนิค: อ่านย่อหน้าแรก ประโยคแรกของทุกย่อหน้า และสรุปท้ายเรื่อง</li>
+                                    <li>ความเร็ว: อ่านเร็วกว่าปกติ 3-4 เท่า</li>
+                                </ul>
+                            </div>
+                            <div class="bg-sky-50/70 p-5 rounded-2xl border border-sky-200 space-y-2">
+                                <h4 class="font-bold text-sky-700 text-sm flex items-center gap-2"><i class="fa-solid fa-magnifying-glass"></i> Scanning (ค้นหาคำ/ตัวเลขเฉพาะ)</h4>
+                                <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                                    <li>เป้าหมาย: หา Specific Details (ชื่อคน, วันที่, ตัวเลข)</li>
+                                    <li>เทคนิค: เลื่อนสายตาเป็นรูปตัว Z หรือ S เพื่อหา Keyword</li>
+                                    <li>ความเร็ว: กวาดสายตาเร็วที่สุดโดยไม่อ่านเนื้อหา</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Practice Passage -->
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-slate-800"><i class="fa-solid fa-file-lines text-pink-400"></i> ตัวอย่างบทอ่านสั้นฝึกหัด</h4>
+                                <button onclick="speakText('The First Modern Olympic Games took place in Athens, Greece, in 1896. A total of 241 athletes from 14 nations competed in 43 events.')" class="px-3 py-1 bg-pink-100 text-pink-700 hover:bg-pink-200 rounded-lg text-xs font-medium transition flex items-center gap-1">
+                                    <i class="fa-solid fa-volume-high"></i> ฟังบทอ่าน
+                                </button>
+                            </div>
+                            <p class="text-xs text-slate-600 italic bg-white p-3 rounded-xl border border-slate-100 leading-relaxed">
+                                "The First Modern Olympic Games took place in Athens, Greece, in 1896. A total of 241 athletes from 14 nations competed in 43 events."
+                            </p>
+                            <p class="text-[11px] text-sky-600 font-medium">💡 สแกนหาตัวเลข (Scanning): หากต้องการหาปีที่จัดแข่งขัน สายตาจะหยุดที่ <strong>1896</strong> ทันที</p>
+                        </div>
+
+                        <!-- Vocab -->
+                        <div class="mt-6">
+                            <h4 class="font-bold text-slate-800 text-base mb-3"><i class="fa-solid fa-spell-check text-pink-400"></i> คำศัพท์ยากประจำชั่วโมง</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                ${renderVocabCard("Competed", "v.", "แข่งขัน", "Take part in a contest or competition.", "241 athletes competed in the First Olympic Games.")}
+                                ${renderVocabCard("Specific", "adj.", "เฉพาะเจาะจง", "Clearly defined or identified.", "Scanning helps locate specific details quickly.")}
+                            </div>
+                        </div>
+                    </div>
+                `,
+
+                exerciseHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 mt-6 space-y-6">
+                        <h3 class="text-lg font-bold text-slate-800 border-b pb-3">แบบฝึกหัดชั่วโมงที่ 3: Skim or Scan Test</h3>
+
+                        <form id="quiz-form-3" onsubmit="gradeQuiz(event, 3)">
+                            <div class="space-y-4 text-sm">
+                                <div>
+                                    <p class="font-semibold text-slate-700 mb-2">1. To find the number of athletes (241) in the Olympic passage, which skill is used?</p>
+                                    <div class="flex gap-4 pl-2">
+                                        <label class="flex items-center gap-1.5"><input type="radio" name="q1" value="Scanning"> Scanning</label>
+                                        <label class="flex items-center gap-1.5"><input type="radio" name="q1" value="Skimming"> Skimming</label>
+                                    </div>
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: Scanning</div>
+                                </div>
+
+                                <div>
+                                    <p class="font-semibold text-slate-700 mb-2">2. To get the overall theme of a movie review before buying a ticket, which skill is used?</p>
+                                    <div class="flex gap-4 pl-2">
+                                        <label class="flex items-center gap-1.5"><input type="radio" name="q2" value="Scanning"> Scanning</label>
+                                        <label class="flex items-center gap-1.5"><input type="radio" name="q2" value="Skimming"> Skimming</label>
+                                    </div>
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: Skimming</div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="mt-6 px-6 py-2.5 bg-gradient-to-r from-pink-400 to-sky-400 text-white text-sm font-semibold rounded-xl hover:opacity-95 shadow-md transition">
+                                ส่งคำตอบชั่วโมงที่ 3
+                            </button>
+                        </form>
+                        <div id="result-3" class="mt-4 hidden p-4 rounded-2xl bg-sky-50 border border-sky-200"></div>
+                    </div>
+                `
+            },
+
+            4: {
+                title: "ชั่วโมงที่ 4: การระบุหัวข้อเรื่อง (Finding the Topic)",
+                objective: "ระบุ Topic (หัวข้อเรื่อง) ของบทความสั้นได้อย่างถูกต้องแม่นยำ",
+
+                gameHTML: `
+                    <div class="bg-gradient-to-r from-emerald-50 to-teal-50 p-5 rounded-3xl border border-emerald-200 mb-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-emerald-200 text-emerald-800 text-xs font-bold rounded-full flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad"></i> Warm-up Game (เกมก่อนเรียน)
+                            </span>
+                            <span class="text-xs text-emerald-600">ชั่วโมงที่ 4: Topic Spotter</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-800 mb-2">ทายหัวข้อเรื่อง: "Dogs, Cats, Hamsters, Parrots" สิ่งเหล่านี้มี Topic รวมว่าอะไร?</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkGameAnswer(4, 'A', false)" class="p-3 text-xs bg-white border border-emerald-200 hover:bg-emerald-100 rounded-xl text-left transition">A) Wild Animals</button>
+                            <button onclick="checkGameAnswer(4, 'B', true)" class="p-3 text-xs bg-white border border-emerald-200 hover:bg-emerald-100 rounded-xl text-left transition font-semibold text-slate-700">B) Household Pets</button>
+                            <button onclick="checkGameAnswer(4, 'C', false)" class="p-3 text-xs bg-white border border-emerald-200 hover:bg-emerald-100 rounded-xl text-left transition">C) Sea Creatures</button>
+                        </div>
+                        <div id="game-4-feedback" class="mt-3 text-xs font-semibold hidden"></div>
+                    </div>
+                `,
+
+                contentHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                        <div class="border-l-4 border-emerald-400 pl-4">
+                            <h3 class="text-lg font-bold text-slate-800">ใบความรู้ที่ 4.1: How to Identify the Topic</h3>
+                            <p class="text-sm text-slate-600 mt-1">Topic คือ "เรื่องอะไร" เป็นคำนามหรือวลีสั้นๆ (Noun / Noun Phrase) ไม่ใช่ประโยคสมบูรณ์</p>
+                        </div>
+
+                        <div class="bg-emerald-50/50 p-4 rounded-2xl border border-emerald-100 space-y-2 text-xs text-slate-600">
+                            <p class="font-bold text-emerald-800">📌 หลักการหา Topic จากบทความ:</p>
+                            <ol class="list-decimal list-inside space-y-1">
+                                <li>ถามตนเองว่า "บทความนี้พูดถึง ใคร หรือ อะไร เป็นหลัก?"</li>
+                                <li>มองหา **คำที่ปรากฏบ่อยที่สุด (Repeated Words / Synonyms)** ในย่อหน้า</li>
+                                <li>Topic ต้องไม่กว้างเกินไป (Too General) และไม่แคบเกินไป (Too Specific)</li>
+                            </ol>
+                        </div>
+
+                        <!-- Short Passage -->
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-slate-800"><i class="fa-solid fa-file-lines text-emerald-500"></i> ตัวอย่างบทอ่านวิเคราะห์ Topic</h4>
+                                <button onclick="speakText('Social media platforms have transformed modern communication. Millions of people use Instagram and TikTok daily to share videos and connect with friends globally.')" class="px-3 py-1 bg-emerald-100 text-emerald-700 hover:bg-emerald-200 rounded-lg text-xs font-medium transition flex items-center gap-1">
+                                    <i class="fa-solid fa-volume-high"></i> ฟังบทอ่าน
+                                </button>
+                            </div>
+                            <p class="text-xs text-slate-600 italic bg-white p-3 rounded-xl border border-slate-100 leading-relaxed">
+                                "Social media platforms have transformed modern communication. Millions of people use Instagram and TikTok daily to share videos and connect with friends globally."
+                            </p>
+                            <p class="text-[11px] text-emerald-700 font-medium">✨ <strong>Topic:</strong> "Impact of Social Media" หรือ "Social Media Communication"</p>
+                        </div>
+
+                        <!-- Vocab -->
+                        <div class="mt-6">
+                            <h4 class="font-bold text-slate-800 text-base mb-3"><i class="fa-solid fa-spell-check text-pink-400"></i> คำศัพท์ยากประจำชั่วโมง</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                ${renderVocabCard("Transform", "v.", "เปลี่ยนแปลง / ปฏิรูป", "Make a thorough change in form or appearance.", "Technology can transform communication.")}
+                                ${renderVocabCard("Platform", "n.", "แพลตฟอร์ม / ระบบปฏิบัติการ", "A group of technologies used as a base.", "TikTok is a popular social media platform.")}
+                            </div>
+                        </div>
+                    </div>
+                `,
+
+                exerciseHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 mt-6 space-y-6">
+                        <h3 class="text-lg font-bold text-slate-800 border-b pb-3">แบบฝึกหัดชั่วโมงที่ 4: Identifying Topic</h3>
+
+                        <form id="quiz-form-4" onsubmit="gradeQuiz(event, 4)">
+                            <div class="space-y-3">
+                                <p class="text-sm font-semibold text-slate-700">Select the best TOPIC for the social media passage above:</p>
+                                <div class="space-y-2 text-sm pl-2">
+                                    <label class="flex items-center gap-2"><input type="radio" name="q1" value="A"> A) How to Download Instagram</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="q1" value="B"> B) Social Media and Communication</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="q1" value="C"> C) History of Mobile Phones</label>
+                                </div>
+                                <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: B) Social Media and Communication</div>
+                            </div>
+
+                            <button type="submit" class="mt-6 px-6 py-2.5 bg-gradient-to-r from-pink-400 to-sky-400 text-white text-sm font-semibold rounded-xl hover:opacity-95 shadow-md transition">
+                                ส่งคำตอบชั่วโมงที่ 4
+                            </button>
+                        </form>
+                        <div id="result-4" class="mt-4 hidden p-4 rounded-2xl bg-sky-50 border border-sky-200"></div>
+                    </div>
+                `
+            },
+
+            5: {
+                title: "ชั่วโมงที่ 5: การหาใจความสำคัญที่ระบุไว้อย่างชัดเจน (Stated Main Idea)",
+                objective: "ค้นหาและระบุ Stated Main Idea (Topic Sentence) จากตำแหน่งต่างๆ ในย่อหน้าได้",
+
+                gameHTML: `
+                    <div class="bg-gradient-to-r from-sky-50 to-blue-50 p-5 rounded-3xl border border-sky-200 mb-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-sky-200 text-sky-800 text-xs font-bold rounded-full flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad"></i> Warm-up Game (เกมก่อนเรียน)
+                            </span>
+                            <span class="text-xs text-sky-600">ชั่วโมงที่ 5: Position Quiz</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-800 mb-2">คำถาม: Stated Main Idea มักปรากฏอยู่ที่ตำแหน่งใดของย่อหน้าบ่อยที่สุด?</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkGameAnswer(5, 'A', true)" class="p-3 text-xs bg-white border border-sky-200 hover:bg-sky-100 rounded-xl text-left transition font-semibold text-slate-700">A) ประโยคแรกของย่อหน้า (First Sentence)</button>
+                            <button onclick="checkGameAnswer(5, 'B', false)" class="p-3 text-xs bg-white border border-sky-200 hover:bg-sky-100 rounded-xl text-left transition">B) เชื่องโยงซ่อนอยู่ในเชิงอรรถ</button>
+                            <button onclick="checkGameAnswer(5, 'C', false)" class="p-3 text-xs bg-white border border-sky-200 hover:bg-sky-100 rounded-xl text-left transition">C) คำพูดตัวละคร</button>
+                        </div>
+                        <div id="game-5-feedback" class="mt-3 text-xs font-semibold hidden"></div>
+                    </div>
+                `,
+
+                contentHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                        <div class="border-l-4 border-sky-400 pl-4">
+                            <h3 class="text-lg font-bold text-slate-800">ใบความรู้ที่ 5.1: Finding the Stated Main Idea</h3>
+                            <p class="text-sm text-slate-600 mt-1">Stated Main Idea คือ ประโยคใจความหลักที่ผู้เขียนระบุไว้ในย่อหน้าอย่างชัดเจน (Explicitly Stated Sentence)</p>
+                        </div>
+
+                        <div class="bg-sky-50/50 p-4 rounded-2xl border border-sky-100 space-y-2 text-xs text-slate-600">
+                            <p class="font-bold text-sky-800">💡 ตำแหน่งที่พบบ่อยของ Stated Main Idea:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li><strong>At the beginning:</strong> ต้นย่อหน้า (พบบ่อยที่สุดประมาณ 80%)</li>
+                                <li><strong>At the end:</strong> ท้ายย่อหน้า (เป็นประโยคสรุปความ)</li>
+                                <li><strong>In the middle:</strong> กลางย่อหน้า (เมื่อมีคำขัดแย้ง เช่น However, But)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Short Passage -->
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-slate-800"><i class="fa-solid fa-file-lines text-sky-500"></i> ตัวอย่างบทอ่าน Stated Main Idea</h4>
+                                <button onclick="speakText('Drinking enough water daily is essential for human health. Water regulates body temperature, protects joints, and improves kidney function.')" class="px-3 py-1 bg-sky-100 text-sky-700 hover:bg-sky-200 rounded-lg text-xs font-medium transition flex items-center gap-1">
+                                    <i class="fa-solid fa-volume-high"></i> ฟังบทอ่าน
+                                </button>
+                            </div>
+                            <p class="text-xs text-slate-600 italic bg-white p-3 rounded-xl border border-slate-100 leading-relaxed">
+                                "<span class="bg-yellow-200 font-semibold px-1 rounded">[1] Drinking enough water daily is essential for human health.</span> [2] Water regulates body temperature, protects joints, and improves kidney function."
+                            </p>
+                            <p class="text-[11px] text-sky-700 font-medium">📍 <strong>Stated Main Idea:</strong> ประโยคที่ [1] เพราะเป็นประโยคหลัก ส่วนประโยคที่ [2] เป็นเพียงขยายรายละเอียด (Supporting detail)</p>
+                        </div>
+
+                        <!-- Vocab -->
+                        <div class="mt-6">
+                            <h4 class="font-bold text-slate-800 text-base mb-3"><i class="fa-solid fa-spell-check text-pink-400"></i> คำศัพท์ยากประจำชั่วโมง</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                ${renderVocabCard("Essential", "adj.", "จำเป็นอย่างยิ่ง / สำคัญ", "Absolutely necessary; extremely important.", "Water is essential for survival.")}
+                                ${renderVocabCard("Regulate", "v.", "ควบคุม / ปรับระดับ", "Control or maintain the rate or speed.", "Water helps regulate body temperature.")}
+                            </div>
+                        </div>
+                    </div>
+                `,
+
+                exerciseHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 mt-6 space-y-6">
+                        <h3 class="text-lg font-bold text-slate-800 border-b pb-3">แบบฝึกหัดชั่วโมงที่ 5: Locating Stated Main Idea</h3>
+
+                        <form id="quiz-form-5" onsubmit="gradeQuiz(event, 5)">
+                            <div class="space-y-3">
+                                <p class="text-sm font-semibold text-slate-700">Which sentence from the water passage represents the Stated Main Idea?</p>
+                                <div class="space-y-2 text-sm pl-2">
+                                    <label class="flex items-center gap-2"><input type="radio" name="q1" value="1"> Sentence [1]: Drinking enough water daily is essential for human health.</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="q1" value="2"> Sentence [2]: Water regulates body temperature and protects joints.</label>
+                                </div>
+                                <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: Sentence [1]</div>
+                            </div>
+
+                            <button type="submit" class="mt-6 px-6 py-2.5 bg-gradient-to-r from-pink-400 to-sky-400 text-white text-sm font-semibold rounded-xl hover:opacity-95 shadow-md transition">
+                                ส่งคำตอบชั่วโมงที่ 5
+                            </button>
+                        </form>
+                        <div id="result-5" class="mt-4 hidden p-4 rounded-2xl bg-sky-50 border border-sky-200"></div>
+                    </div>
+                `
+            },
+
+            6: {
+                title: "ชั่วโมงที่ 6: การหาใจความสำคัญโดยนัย (Implied Main Idea)",
+                objective: "วิเคราะห์รายละเอียดแวดล้อมเพื่อสรุปเป็น Implied Main Idea ภาษาของตนเองได้",
+
+                gameHTML: `
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-5 rounded-3xl border border-purple-200 mb-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-purple-200 text-purple-800 text-xs font-bold rounded-full flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad"></i> Warm-up Game (เกมก่อนเรียน)
+                            </span>
+                            <span class="text-xs text-purple-600">ชั่วโมงที่ 6: Detective Inference</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-800 mb-2">คำใบ้: "อุณหภูมิห้องลดลงอย่างรวดเร็ว หิมะเริ่มตกนอกหน้าต่าง ทุกคนเริ่มสวมเสื้อโค้ตตัวหนา" คุณสรุปได้ว่าอย่างไร?</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <button onclick="checkGameAnswer(6, 'A', true)" class="p-3 text-xs bg-white border border-purple-200 hover:bg-purple-100 rounded-xl text-left transition font-semibold text-slate-700">A) อากาศภายนอกหนาวเย็นจัดเป็นฤดูหนาว (Implied Main Idea)</button>
+                            <button onclick="checkGameAnswer(6, 'B', false)" class="p-3 text-xs bg-white border border-purple-200 hover:bg-purple-100 rounded-xl text-left transition">B) ทุกคนกำลังจะออกไปว่ายน้ำ</button>
+                        </div>
+                        <div id="game-6-feedback" class="mt-3 text-xs font-semibold hidden"></div>
+                    </div>
+                `,
+
+                contentHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                        <div class="border-l-4 border-purple-400 pl-4">
+                            <h3 class="text-lg font-bold text-slate-800">ใบความรู้ที่ 6.1: Understanding Implied Main Idea</h3>
+                            <p class="text-sm text-slate-600 mt-1">Implied Main Idea คือ ใจความสำคัญที่ **ไม่ได้เขียนไว้ตรงๆ** ผู้อ่านต้องสรุปอ้างอิง (Inference) จากรายละเอียดแวดล้อม (Supporting details)</p>
+                        </div>
+
+                        <div class="bg-purple-50/50 p-4 rounded-2xl border border-purple-100 space-y-2 text-xs text-slate-600">
+                            <p class="font-bold text-purple-800">🔍 ขั้นตอนการถอดรหัส Implied Main Idea:</p>
+                            <ol class="list-decimal list-inside space-y-1">
+                                <li>ระบุ Topic (หัวข้อเรื่อง) ของย่อหน้าให้ได้ก่อน</li>
+                                <li>พิจารณา Supporting details ทั้งหมดว่าชี้ไปในทิศทางใด</li>
+                                <li>เรียบเรียงเป็นประโยคใจความสมบูรณ์ด้วยภาษาของตนเอง</li>
+                            </ol>
+                        </div>
+
+                        <!-- Short Passage -->
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-sm text-slate-800"><i class="fa-solid fa-file-lines text-purple-500"></i> ตัวอย่างบทอ่านถอดรหัส Implied Main Idea</h4>
+                                <button onclick="speakText('The sky turned dark gray, heavy winds shook the trees, and people on the street ran for cover as thunder rumbled.')" class="px-3 py-1 bg-purple-100 text-purple-700 hover:bg-purple-200 rounded-lg text-xs font-medium transition flex items-center gap-1">
+                                    <i class="fa-solid fa-volume-high"></i> ฟังบทอ่าน
+                                </button>
+                            </div>
+                            <p class="text-xs text-slate-600 italic bg-white p-3 rounded-xl border border-slate-100 leading-relaxed">
+                                "The sky turned dark gray, heavy winds shook the trees, and people on the street ran for cover as thunder rumbled."
+                            </p>
+                            <p class="text-[11px] text-purple-700 font-medium">🔮 <strong>Implied Main Idea:</strong> "A violent thunderstorm is rapidly approaching." (พายุฝนฟ้าคะนองกำลังจะเกิดขึ้นอย่างรุนแรง)</p>
+                        </div>
+
+                        <!-- Vocab -->
+                        <div class="mt-6">
+                            <h4 class="font-bold text-slate-800 text-base mb-3"><i class="fa-solid fa-spell-check text-pink-400"></i> คำศัพท์ยากประจำชั่วโมง</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                ${renderVocabCard("Inference", "n.", "การสรุปอ้างอิง / การตีความ", "A conclusion reached on the basis of evidence and reasoning.", "Good readers use inference to find hidden meanings.")}
+                                ${renderVocabCard("Approaching", "v.", "กำลังเข้าใกล้", "Come near or nearer to something.", "A severe storm is approaching the city.")}
+                            </div>
+                        </div>
+                    </div>
+                `,
+
+                exerciseHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 mt-6 space-y-6">
+                        <h3 class="text-lg font-bold text-slate-800 border-b pb-3">แบบฝึกหัดชั่วโมงที่ 6: Inferring Implied Main Idea</h3>
+
+                        <form id="quiz-form-6" onsubmit="gradeQuiz(event, 6)">
+                            <div class="space-y-3">
+                                <p class="text-sm font-semibold text-slate-700">What is the Implied Main Idea of the storm passage above?</p>
+                                <div class="space-y-2 text-sm pl-2">
+                                    <label class="flex items-center gap-2"><input type="radio" name="q1" value="A"> A) People enjoy running in the park.</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="q1" value="B"> B) A severe storm is approaching.</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="q1" value="C"> C) Trees need water to grow.</label>
+                                </div>
+                                <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: B) A severe storm is approaching.</div>
+                            </div>
+
+                            <button type="submit" class="mt-6 px-6 py-2.5 bg-gradient-to-r from-pink-400 to-sky-400 text-white text-sm font-semibold rounded-xl hover:opacity-95 shadow-md transition">
+                                ส่งคำตอบชั่วโมงที่ 6
+                            </button>
+                        </form>
+                        <div id="result-6" class="mt-4 hidden p-4 rounded-2xl bg-sky-50 border border-sky-200"></div>
+                    </div>
+                `
+            },
+
+            7: {
+                title: "ชั่วโมงที่ 7: สรุปบทเรียน & แบบทดสอบย่อยประจำหน่วยที่ 1",
+                objective: "ทบทวนองค์ความรู้และประเมินผลการเรียนรู้ Reading Foundations & Strategies (7 คะแนน)",
+
+                gameHTML: `
+                    <div class="bg-gradient-to-r from-pink-100 to-sky-100 p-5 rounded-3xl border border-pink-200 mb-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 bg-white text-pink-600 text-xs font-bold rounded-full shadow-sm">
+                                <i class="fa-solid fa-flag-checkered"></i> Ready for Unit Test?
+                            </span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-800">ทบทวนความพร้อมก่อนทำแบบทดสอบย่อย 7 คะแนน</h4>
+                        <p class="text-xs text-slate-600 mt-1">ตรวจสอบชื่อ-สกุล ห้องเรียน ม.4/1 - 4/5 และเลขที่ให้ถูกต้องก่อนกดส่งคำตอบนะเด็กๆ!</p>
+                    </div>
+                `,
+
+                contentHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4">
+                        <div class="bg-gradient-to-r from-pink-400 to-sky-400 text-white p-6 rounded-2xl shadow-md">
+                            <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-graduation-cap"></i> สรุปภาพรวมหน่วยที่ 1 (Summary Review)</h3>
+                            <p class="text-xs text-pink-50 leading-relaxed">
+                                ในหน่วยนี้ นักเรียนได้พัฒนาทักษะตั้งแต่ขั้นตอนการอ่าน Pre/While/Post, เทคนิคอ่านเร็ว Skimming & Scanning, การวิเคราะห์ Topic และการระบุ Stated & Implied Main Idea เพื่อเตรียมพร้อมสู่การอ่านเชิงวิจารณ์ในระดับสูงต่อไป
+                            </p>
+                        </div>
+                    </div>
+                `,
+
+                exerciseHTML: `
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-pink-100 mt-6 space-y-6">
+                        <h3 class="text-lg font-bold text-slate-800 border-b pb-3 flex items-center justify-between">
+                            <span class="text-pink-600"><i class="fa-solid fa-file-pen"></i> แบบทดสอบย่อยประจำหน่วยที่ 1 (Unit 1 Test)</span>
+                            <span class="text-xs bg-pink-100 text-pink-700 px-3 py-1 rounded-full font-bold">7 คะแนน</span>
+                        </h3>
+
+                        <form id="quiz-form-7" onsubmit="gradeQuiz(event, 7)">
+                            <div class="space-y-6 text-sm">
+                                <!-- Q1 -->
+                                <div>
+                                    <p class="font-semibold text-slate-800">1. Highlighting main points and taking notes during reading belongs to which stage?</p>
+                                    <div class="space-y-1.5 pl-2 mt-2 text-xs sm:text-sm">
+                                        <label class="flex items-center gap-2"><input type="radio" name="q1" value="A"> A) Pre-reading</label>
+                                        <label class="flex items-center gap-2"><input type="radio" name="q1" value="B"> B) While-reading</label>
+                                        <label class="flex items-center gap-2"><input type="radio" name="q1" value="C"> C) Post-reading</label>
+                                    </div>
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: B) While-reading</div>
+                                </div>
+
+                                <!-- Q2 -->
+                                <div>
+                                    <p class="font-semibold text-slate-800">2. Which strategy is best for finding a specific birth date in a biography?</p>
+                                    <div class="space-y-1.5 pl-2 mt-2 text-xs sm:text-sm">
+                                        <label class="flex items-center gap-2"><input type="radio" name="q2" value="A"> A) Skimming</label>
+                                        <label class="flex items-center gap-2"><input type="radio" name="q2" value="B"> B) Scanning</label>
+                                        <label class="flex items-center gap-2"><input type="radio" name="q2" value="C"> C) Predicting</label>
+                                    </div>
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: B) Scanning</div>
+                                </div>
+
+                                <!-- Q3 -->
+                                <div>
+                                    <p class="font-semibold text-slate-800">3. A "Topic" is best defined as:</p>
+                                    <div class="space-y-1.5 pl-2 mt-2 text-xs sm:text-sm">
+                                        <label class="flex items-center gap-2"><input type="radio" name="q3" value="A"> A) A short word or phrase indicating what the text is about.</label>
+                                        <label class="flex items-center gap-2"><input type="radio" name="q3" value="B"> B) A complete sentence providing full details.</label>
+                                        <label class="flex items-center gap-2"><input type="radio" name="q3" value="C"> C) The conclusion of the story.</label>
+                                    </div>
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: A) A short word or phrase indicating what the text is about.</div>
+                                </div>
+
+                                <!-- Q4 -->
+                                <div>
+                                    <p class="font-semibold text-slate-800">4. An Implied Main Idea differs from a Stated Main Idea because it is:</p>
+                                    <div class="space-y-1.5 pl-2 mt-2 text-xs sm:text-sm">
+                                        <label class="flex items-center gap-2"><input type="radio" name="q4" value="A"> A) Directly printed in the text.</label>
+                                        <label class="flex items-center gap-2"><input type="radio" name="q4" value="B"> B) Not directly stated and must be inferred.</label>
+                                        <label class="flex items-center gap-2"><input type="radio" name="q4" value="C"> C) Always located at the end of the text.</label>
+                                    </div>
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: B) Not directly stated and must be inferred.</div>
+                                </div>
+
+                                <!-- Q5 (Fill-in) -->
+                                <div>
+                                    <p class="font-semibold text-slate-800">5. Write the missing key word: "Finding the __________ idea helps you understand the author's primary message."</p>
+                                    <input type="text" name="q5" placeholder="พิมพ์คำตอบภาษาอังกฤษ..." class="w-full max-w-xs px-3 py-2 text-xs border border-slate-200 rounded-xl focus:outline-none">
+                                    <div class="teacher-answer hidden text-xs font-semibold text-emerald-600 bg-emerald-50 p-2 rounded-lg mt-2">เฉลย: main</div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="mt-6 w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-pink-500 to-sky-500 text-white text-sm font-bold rounded-2xl hover:opacity-95 shadow-lg transition">
+                                ส่งแบบทดสอบย่อยประจำหน่วยที่ 1
+                            </button>
+                        </form>
+                        <div id="result-7" class="mt-4 hidden p-4 rounded-2xl bg-pink-50 border border-pink-200"></div>
+                    </div>
+                `
+            }
+        };
+
+        // Mini-game check answer feedback
+        function checkGameAnswer(hour, choice, isCorrect) {
+            const feedbackEl = document.getElementById(`game-${hour}-feedback`);
+            feedbackEl.classList.remove('hidden');
+            if (isCorrect) {
+                feedbackEl.className = "mt-3 text-xs font-bold text-emerald-600 bg-emerald-50 p-2.5 rounded-xl border border-emerald-200";
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-check"></i> ถูกต้องครับ! คุณเข้าใจแนวคิดตั้งต้นชั่วโมงนี้เป็นอย่างดี`;
+            } else {
+                feedbackEl.className = "mt-3 text-xs font-bold text-amber-600 bg-amber-50 p-2.5 rounded-xl border border-amber-200";
+                feedbackEl.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> ยังไม่ถูกต้อง ลองเลือกตัวเลือกอื่นดูนะครับ!`;
+            }
+        }
+
+        // Render Active Hour Lesson
+        function switchHour(hourNum) {
+            currentHour = hourNum;
+            
+            // Update Tab UI
+            document.querySelectorAll('.hour-tab').forEach((tab, idx) => {
+                if (idx + 1 === hourNum) {
+                    tab.className = "hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-gradient-to-r from-pink-400 to-sky-400 text-white shadow-md";
+                } else {
+                    tab.className = "hour-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:bg-pink-50 border border-slate-200";
+                }
+            });
+
+            // Render Content
+            const area = document.getElementById('lesson-content-area');
+            const data = lessons[hourNum];
+            area.innerHTML = `
+                <div class="space-y-1">
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">${data.title}</h2>
+                    <p class="text-xs sm:text-sm text-pink-600 font-medium"><i class="fa-solid fa-bullseye"></i> วัตถุประสงค์: ${data.objective}</p>
+                </div>
+                ${data.gameHTML || ''}
+                ${data.contentHTML}
+                ${data.exerciseHTML}
+            `;
+
+            if (showAnswers) {
+                document.querySelectorAll('.teacher-answer').forEach(el => el.classList.remove('hidden'));
+            }
+        }
+
+        // Web Speech API
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.9;
+                
+                const toast = document.getElementById('tts-toast');
+                const toastText = document.getElementById('tts-text');
+                toastText.textContent = `กำลังเล่นเสียงอ่าน: "${text.length > 30 ? text.substring(0, 30) + '...' : text}"`;
+                toast.classList.remove('opacity-0', 'pointer-events-none');
+                
+                utterance.onend = () => {
+                    toast.classList.add('opacity-0', 'pointer-events-none');
+                };
+                
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert("อุปกรณ์ของคุณไม่รองรับการออกเสียงแบบ Web Speech API");
+            }
+        }
+
+        // Grading Logic
+        function gradeQuiz(e, hour) {
+            e.preventDefault();
+            const form = e.target;
+            const name = document.getElementById('student-name').value.trim();
+            const sClass = document.getElementById('student-class').value;
+            const sNo = document.getElementById('student-no').value;
+
+            if (!name || !sClass || !sNo) {
+                alert("กรุณากรอกข้อมูล ชื่อ-นามสกุล, ห้องเรียน (ม.4/1-4/5) และเลขที่ ให้ครบถ้วนก่อนส่งแบบฝึกหัดครับ");
+                document.getElementById('student-bar').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+
+            let score = 0;
+            let total = 0;
+
+            if (hour === 1) {
+                total = 2;
+                if (form.q1 && form.q1.value === 'B') score++;
+                if (form.q2 && form.q2.value.trim().toLowerCase().includes('distinguish')) score++;
+            } else if (hour === 2) {
+                total = 2;
+                if (form.q1 && form.q1.value === 'Pre-reading') score++;
+                if (form.q2 && form.q2.value === 'Post-reading') score++;
+            } else if (hour === 3) {
+                total = 2;
+                if (form.q1 && form.q1.value === 'Scanning') score++;
+                if (form.q2 && form.q2.value === 'Skimming') score++;
+            } else if (hour === 4) {
+                total = 1;
+                if (form.q1 && form.q1.value === 'B') score++;
+            } else if (hour === 5) {
+                total = 1;
+                if (form.q1 && form.q1.value === '1') score++;
+            } else if (hour === 6) {
+                total = 1;
+                if (form.q1 && form.q1.value === 'B') score++;
+            } else if (hour === 7) {
+                total = 5;
+                if (form.q1 && form.q1.value === 'B') score++;
+                if (form.q2 && form.q2.value === 'B') score++;
+                if (form.q3 && form.q3.value === 'A') score++;
+                if (form.q4 && form.q4.value === 'B') score++;
+                if (form.q5 && form.q5.value.trim().toLowerCase() === 'main') score++;
+            }
+
+            const resBox = document.getElementById(`result-${hour}`);
+            resBox.classList.remove('hidden');
+            resBox.innerHTML = `
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">บันทึกคะแนนสำเร็จแล้ว!</h4>
+                        <p class="text-xs text-slate-600">ผู้เรียน: <span class="font-semibold text-pink-600">${name} (${sClass} เลขที่ ${sNo})</span></p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-2xl font-black text-sky-600">${score}</span>
+                        <span class="text-xs text-slate-400">/ ${total} คะแนน</span>
+                    </div>
+                </div>
+            `;
+
+            const key = `${sClass}_${sNo}_${name}`;
+            if (!studentScores[key]) studentScores[key] = {};
+            studentScores[key][`Hour_${hour}`] = `${score}/${total}`;
+            updateTeacherScoresList();
+        }
+
+        // Teacher System Auth
+        function openTeacherModal() {
+            document.getElementById('teacher-modal').classList.remove('hidden');
+        }
+
+        function closeTeacherModal() {
+            document.getElementById('teacher-modal').classList.add('hidden');
+            document.getElementById('pass-error').classList.add('hidden');
+        }
+
+        function verifyTeacherPass(e) {
+            e.preventDefault();
+            const pass = document.getElementById('teacher-pass').value;
+            if (pass === '198020') {
+                isTeacherMode = true;
+                closeTeacherModal();
+                document.getElementById('teacher-dashboard').classList.remove('translate-x-full');
+            } else {
+                document.getElementById('pass-error').classList.remove('hidden');
+            }
+        }
+
+        function closeTeacherDashboard() {
+            document.getElementById('teacher-dashboard').classList.add('translate-x-full');
+        }
+
+        function logoutTeacher() {
+            isTeacherMode = false;
+            showAnswers = false;
+            document.querySelectorAll('.teacher-answer').forEach(el => el.classList.add('hidden'));
+            closeTeacherDashboard();
+            alert("ออกจากระบบผู้สอนเรียบร้อยแล้ว");
+        }
+
+        function toggleAnswerKeys() {
+            showAnswers = !showAnswers;
+            const btn = document.getElementById('toggle-answers-btn');
+            if (showAnswers) {
+                btn.textContent = "ซ่อนเฉลยในหน้าบทเรียน";
+                btn.className = "mt-3 w-full py-2 text-xs font-semibold bg-slate-600 text-white rounded-xl hover:bg-slate-700 transition";
+                document.querySelectorAll('.teacher-answer').forEach(el => el.classList.remove('hidden'));
+            } else {
+                btn.textContent = "แสดงเฉลยในหน้าบทเรียน";
+                btn.className = "mt-3 w-full py-2 text-xs font-semibold bg-pink-500 text-white rounded-xl hover:bg-pink-600 transition";
+                document.querySelectorAll('.teacher-answer').forEach(el => el.classList.add('hidden'));
+            }
+        }
+
+        function updateTeacherScoresList() {
+            const list = document.getElementById('student-scores-list');
+            const entries = Object.entries(studentScores);
+            if (entries.length === 0) {
+                list.innerHTML = `<p class="text-slate-400 italic">ยังไม่มีข้อมูลการส่งแบบฝึกหัดในเซสชันนี้</p>`;
+                return;
+            }
+
+            list.innerHTML = entries.map(([st, scores]) => {
+                const parts = st.split('_');
+                const details = Object.entries(scores).map(([h, sc]) => `${h}: ${sc}`).join(', ');
+                return `
+                    <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+                        <div class="font-semibold text-slate-800">${parts[2]} (${parts[0]} เลขที่ ${parts[1]})</div>
+                        <div class="text-[11px] text-pink-600 mt-0.5">${details}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        window.onload = function() {
+            switchHour(1);
+        };
+    </script>
+</body>
+</html>
